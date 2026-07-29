@@ -13,30 +13,6 @@ const year = new Date().getFullYear();
       <p class="font-mono text-xs text-mute">{site.brand.location}</p>
     </div>
 
-    <div class="space-y-3">
-      <p class="font-mono text-xs uppercase tracking-[0.14em] text-mute">Connect</p>
-      <ul class="space-y-2">
-        <li>
-          <a class="text-sm text-paper-dim hover:text-accent" href={`mailto:${site.brand.email}`}>
-            {site.brand.email}
-          </a>
-        </li>
-        {
-          site.social.map((item) => (
-            <li>
-              <a
-                class="text-sm text-paper-dim hover:text-accent"
-                href={item.href}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
   </div>
   <div class="border-t border-line/50">
     <p class="mx-auto max-w-6xl px-5 py-5 font-mono text-xs text-mute sm:px-8">

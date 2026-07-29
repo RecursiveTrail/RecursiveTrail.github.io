@@ -3,7 +3,6 @@
     "name": "Recursive Trail",
     "tagline": "Senior engineers. End-to-end builds.",
     "legalName": "Recursive Trail",
-    "email": "hello@recursivetrail.dev",
     "location": "India · IST (UTC+5:30)"
   },
   "seo": {
@@ -14,6 +13,7 @@
   "nav": [
     { "label": "Services", "href": "#services" },
     { "label": "Stack", "href": "#stack" },
+    { "label": "Projects", "href": "#projects" },
     { "label": "Why us", "href": "#why" },
     { "label": "Process", "href": "#process" },
     { "label": "Team", "href": "#team" },
@@ -70,9 +70,29 @@
       }
     ]
   },
+  "projects": {
+    "id": "projects",
+    "eyebrow": "03 — Projects",
+    "title": "Selected work",
+    "subtitle": "Products we have designed and built end to end.",
+    "items": [
+      {
+        "name": "FitBuddy",
+        "tagline": "Fitness companion app",
+        "description": "A full-featured, local-first Flutter fitness companion with on-device pose tracking, rep counting, workout and diet plans, progress photos, and optional Gemini form analysis. Includes a React PWA companion and Supabase-backed plan library.",
+        "image": "/projects/fitbuddy.png",
+        "imageAlt": "FitBuddy app icon",
+        "tags": ["Flutter", "ML Kit", "MediaPipe", "Isar", "Gemini", "Supabase", "React"],
+        "link": {
+          "label": "Join the testing group",
+          "href": "https://groups.google.com/g/fitbuddy-app-testing"
+        }
+      }
+    ]
+  },
   "why": {
     "id": "why",
-    "eyebrow": "03 — Why us",
+    "eyebrow": "04 — Why us",
     "title": "Small team. Senior hands. No handoffs.",
     "subtitle": "You work with the people who design, build, and ship — not an account manager layer.",
     "points": [
@@ -92,7 +112,7 @@
   },
   "process": {
     "id": "process",
-    "eyebrow": "04 — Process",
+    "eyebrow": "05 — Process",
     "title": "How we work",
     "subtitle": "A short path from enquiry to something users can touch.",
     "steps": [
@@ -120,7 +140,7 @@
   },
   "team": {
     "id": "team",
-    "eyebrow": "05 — Team",
+    "eyebrow": "06 — Team",
     "title": "The people behind the trail",
     "subtitle": "Two senior full-stack developers with more than a decade of industry experience each.",
     "members": [
@@ -142,7 +162,7 @@
   },
   "contact": {
     "id": "contact",
-    "eyebrow": "06 — Contact",
+    "eyebrow": "07 — Contact",
     "title": "Tell us about the project",
     "subtitle": "Share a few details and we will follow up to discuss scope, timeline, and fit.",
     "successTitle": "Enquiry received",
@@ -153,15 +173,5 @@
   "footer": {
     "blurb": "Recursive Trail builds web, mobile, and backend products with a senior two-person team.",
     "copyright": "Recursive Trail. All rights reserved."
-  },
-  "social": [
-    {
-      "label": "PLACEHOLDER — LinkedIn",
-      "href": "https://linkedin.com/"
-    },
-    {
-      "label": "PLACEHOLDER — GitHub",
-      "href": "https://github.com/RecursiveTrail"
-    }
-  ]
+  }
 }
