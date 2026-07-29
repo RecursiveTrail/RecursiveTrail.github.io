@@ -1,0 +1,59 @@
+---
+import { site } from '../../content';
+---
+
+<section id="top" class="relative overflow-hidden pt-28 sm:pt-36">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 pb-20 sm:px-8 sm:pb-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+    <div class="reveal">
+      <p class="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-accent">
+        {site.hero.eyebrow}
+      </p>
+      <p class="mb-4 text-4xl font-semibold tracking-tight text-paper sm:text-5xl lg:text-6xl">
+        {site.brand.name}
+      </p>
+      <h1 class="max-w-xl text-balance text-xl font-medium leading-snug text-paper-dim sm:text-2xl">
+        {site.hero.headline}
+      </h1>
+      <p class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-mute sm:text-lg">
+        {site.hero.subhead}
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a
+          href={site.hero.cta.href}
+          class="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-ink transition hover:bg-accent/90"
+        >
+          {site.hero.cta.label}
+        </a>
+        <a
+          href={site.hero.secondaryCta.href}
+          class="rounded-md border border-line px-5 py-3 text-sm font-medium text-paper-dim transition hover:border-accent/50 hover:text-paper"
+        >
+          {site.hero.secondaryCta.label}
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal relative hidden lg:block" style="animation-delay: 120ms">
+      <div
+        class="rounded-2xl border border-line bg-ink-elevated/80 p-6 font-mono text-xs leading-relaxed text-mute shadow-[0_0_0_1px_rgba(61,222,168,0.08)]"
+        aria-hidden="true"
+      >
+        <div class="mb-4 flex items-center gap-2 text-paper-dim">
+          <span class="h-2.5 w-2.5 rounded-full bg-danger/80"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-warn/80"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-accent/80"></span>
+          <span class="ml-2 text-[10px] uppercase tracking-widest">trail.session</span>
+        </div>
+        <pre class="overflow-x-auto whitespace-pre text-[11px] sm:text-xs"><code><span class="text-accent">const</span> studio = &#123;
+  people: <span class="text-warn">2</span>,
+  years: <span class="text-warn">10+</span>,
+  stack: [<span class="text-paper">'web'</span>, <span class="text-paper">'mobile'</span>, <span class="text-paper">'api'</span>],
+  handoff: <span class="text-danger">false</span>,
+&#125;;
+
+<span class="text-mute">// you talk to the builders</span>
+await studio.ship(idea);</code></pre>
+      </div>
+    </div>
+  </div>
+</section>

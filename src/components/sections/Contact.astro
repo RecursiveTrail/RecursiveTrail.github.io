@@ -1,0 +1,242 @@
+---
+import { site, form } from '../../content';
+import Section from '../ui/Section.astro';
+
+const { contact } = site;
+const fields = form.fields;
+---
+
+<Section id={contact.id} eyebrow={contact.eyebrow} title={contact.title} subtitle={contact.subtitle}>
+  <div class="reveal mx-auto max-w-2xl">
+    <div
+      id="enquiry-success"
+      class="hidden rounded-lg border border-accent/40 bg-accent/10 px-6 py-8"
+      role="status"
+      aria-live="polite"
+    >
+      <h3 class="text-xl font-semibold text-paper">{contact.successTitle}</h3>
+      <p class="mt-2 text-mute">{contact.successMessage}</p>
+    </div>
+
+    <form
+      id="enquiry-form"
+      action={form.action}
+      method={form.method}
+      target="enquiry-iframe"
+      novalidate
+      class="space-y-6"
+      data-min-submit-ms={form.minSubmitMs}
+    >
+      <div class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label>
+          Leave blank
+          <input type="text" name={form.honeypotName} tabindex="-1" autocomplete="off" />
+        </label>
+      </div>
+
+      <div>
+        <label for="field-name" class="mb-2 block text-sm font-medium text-paper-dim">
+          {fields.name.label}
+        </label>
+        <input
+          id="field-name"
+          name={fields.name.entry}
+          type="text"
+          required={fields.name.required}
+          autocomplete={fields.name.autocomplete}
+          placeholder={fields.name.placeholder}
+          class="w-full rounded-md border border-line bg-ink-elevated px-3.5 py-2.5 text-paper placeholder:text-mute/60 focus:border-accent"
+        />
+        <p class="field-error mt-1.5 hidden text-sm text-danger" data-error-for="field-name"></p>
+      </div>
+
+      <div>
+        <label for="field-email" class="mb-2 block text-sm font-medium text-paper-dim">
+          {fields.email.label}
+        </label>
+        <input
+          id="field-email"
+          name={fields.email.entry}
+          type="email"
+          required={fields.email.required}
+          autocomplete={fields.email.autocomplete}
+          placeholder={fields.email.placeholder}
+          class="w-full rounded-md border border-line bg-ink-elevated px-3.5 py-2.5 text-paper placeholder:text-mute/60 focus:border-accent"
+        />
+        <p class="field-error mt-1.5 hidden text-sm text-danger" data-error-for="field-email"></p>
+      </div>
+
+      <fieldset>
+        <legend class="mb-3 text-sm font-medium text-paper-dim">{fields.goal.label}</legend>
+        <div class="grid gap-2 sm:grid-cols-2">
+          {
+            fields.goal.options.map((option) => (
+              <label class="flex cursor-pointer items-center gap-2.5 rounded-md border border-line bg-ink-elevated px-3 py-2.5 text-sm text-paper-dim has-[:checked]:border-accent has-[:checked]:text-paper">
+                <input
+                  type="radio"
+                  name={fields.goal.entry}
+                  value={option}
+                  required={fields.goal.required}
+                  class="accent-[var(--color-accent)]"
+                />
+                {option}
+              </label>
+            ))
+          }
+        </div>
+        <p class="field-error mt-1.5 hidden text-sm text-danger" data-error-for="goal"></p>
+      </fieldset>
+
+      <div>
+        <label for="field-requirements" class="mb-2 block text-sm font-medium text-paper-dim">
+          {fields.requirements.label}
+        </label>
+        <textarea
+          id="field-requirements"
+          name={fields.requirements.entry}
+          required={fields.requirements.required}
+          rows={fields.requirements.rows}
+          placeholder={fields.requirements.placeholder}
+          class="w-full rounded-md border border-line bg-ink-elevated px-3.5 py-2.5 text-paper placeholder:text-mute/60 focus:border-accent"
+        ></textarea>
+        <p class="field-error mt-1.5 hidden text-sm text-danger" data-error-for="field-requirements"></p>
+      </div>
+
+      <div>
+        <label for="field-timeline" class="mb-2 block text-sm font-medium text-paper-dim">
+          {fields.timeline.label}
+        </label>
+        <select
+          id="field-timeline"
+          name={fields.timeline.entry}
+          required={fields.timeline.required}
+          class="w-full rounded-md border border-line bg-ink-elevated px-3.5 py-2.5 text-paper focus:border-accent"
+        >
+          <option value="">{fields.timeline.placeholder}</option>
+          {
+            fields.timeline.options.map((option) => (
+              <option value={option}>{option}</option>
+            ))
+          }
+        </select>
+        <p class="field-error mt-1.5 hidden text-sm text-danger" data-error-for="field-timeline"></p>
+      </div>
+
+      <p id="form-status" class="hidden text-sm text-danger" role="alert"></p>
+
+      <button
+        type="submit"
+        id="enquiry-submit"
+        class="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-ink transition hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-60"
+        data-label={contact.submitLabel}
+        data-busy-label={contact.submittingLabel}
+      >
+        {contact.submitLabel}
+      </button>
+    </form>
+
+    <iframe
+      name="enquiry-iframe"
+      id="enquiry-iframe"
+      title="Form submission target"
+      class="hidden"
+      tabindex="-1"
+    ></iframe>
+  </div>
+</Section>
+
+<script>
+  const formEl = document.getElementById('enquiry-form') as HTMLFormElement | null;
+  const iframe = document.getElementById('enquiry-iframe') as HTMLIFrameElement | null;
+  const success = document.getElementById('enquiry-success');
+  const submitBtn = document.getElementById('enquiry-submit') as HTMLButtonElement | null;
+  const statusEl = document.getElementById('form-status');
+  if (!formEl || !iframe || !success || !submitBtn) {
+    // no-op when markup missing
+  } else {
+    const startedAt = Date.now();
+    const minMs = Number(formEl.dataset.minSubmitMs || 2500);
+    let awaitingResponse = false;
+
+    function clearErrors() {
+      formEl!.querySelectorAll('.field-error').forEach((el) => {
+        el.classList.add('hidden');
+        el.textContent = '';
+      });
+      statusEl?.classList.add('hidden');
+      if (statusEl) statusEl.textContent = '';
+    }
+
+    function showError(selector: string, message: string) {
+      const el = formEl!.querySelector(`[data-error-for="${selector}"]`);
+      if (el) {
+        el.textContent = message;
+        el.classList.remove('hidden');
+      }
+    }
+
+    function validate(): boolean {
+      clearErrors();
+      let ok = true;
+      const name = (formEl!.elements.namedItem('entry.750210231') as HTMLInputElement)?.value?.trim();
+      const email = (formEl!.elements.namedItem('entry.846203511') as HTMLInputElement)?.value?.trim();
+      const goal = (formEl!.querySelector('input[name="entry.273494085"]:checked') as HTMLInputElement | null)
+        ?.value;
+      const requirements = (formEl!.elements.namedItem('entry.1889579180') as HTMLTextAreaElement)?.value?.trim();
+      const timeline = (formEl!.elements.namedItem('entry.254600995') as HTMLSelectElement)?.value;
+
+      if (!name) {
+        showError('field-name', 'Please enter your name.');
+        ok = false;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('field-email', 'Please enter a valid email address.');
+        ok = false;
+      }
+      if (!goal) {
+        showError('goal', 'Please choose a primary goal.');
+        ok = false;
+      }
+      if (!requirements) {
+        showError('field-requirements', 'Please describe your project.');
+        ok = false;
+      }
+      if (!timeline) {
+        showError('field-timeline', 'Please choose a timeline.');
+        ok = false;
+      }
+      return ok;
+    }
+
+    formEl.addEventListener('submit', (event) => {
+      const hp = formEl.querySelector('input[name="website_url"]') as HTMLInputElement | null;
+      if (hp?.value) {
+        event.preventDefault();
+        return;
+      }
+      if (!validate()) {
+        event.preventDefault();
+        return;
+      }
+      if (Date.now() - startedAt < minMs) {
+        event.preventDefault();
+        if (statusEl) {
+          statusEl.textContent = 'Please take a moment before submitting.';
+          statusEl.classList.remove('hidden');
+        }
+        return;
+      }
+      awaitingResponse = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = submitBtn.dataset.busyLabel || 'Sending…';
+    });
+
+    iframe.addEventListener('load', () => {
+      if (!awaitingResponse) return;
+      awaitingResponse = false;
+      formEl.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+</script>

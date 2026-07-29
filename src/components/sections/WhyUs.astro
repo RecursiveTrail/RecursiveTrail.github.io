@@ -1,0 +1,20 @@
+---
+import { site } from '../../content';
+import Section from '../ui/Section.astro';
+
+const { why } = site;
+---
+
+<Section id={why.id} eyebrow={why.eyebrow} title={why.title} subtitle={why.subtitle}>
+  <ol class="grid gap-8 md:grid-cols-3">
+    {
+      why.points.map((point, i) => (
+        <li class="reveal" style={`animation-delay: ${i * 70}ms`}>
+          <span class="font-mono text-xs text-accent">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="mt-2 text-lg font-semibold text-paper">{point.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-mute sm:text-base">{point.description}</p>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

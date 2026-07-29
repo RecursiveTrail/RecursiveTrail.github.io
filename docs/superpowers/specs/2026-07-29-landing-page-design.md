@@ -17,18 +17,14 @@ A single-page marketing site for Recursive Trail, a two-person full-stack studio
 
 ## Content as JSON
 
-All editable website copy and structured data lives in JSON under `src/content/`, not in component files.
+All editable website copy and structured data lives in JSON under `src/content/`, not in component files. **Prefer editing JSON over touching Astro/TS for content changes.**
 
 | File | Purpose |
 |------|---------|
 | `src/content/site.json` | Brand, SEO, nav, hero, services, stack, why-us, process, team, contact copy, footer, social links |
 | `src/content/form.json` | Google Form action URL, field `entry.*` IDs, options, labels, honeypot config |
 
-Components import these files and render. Changing headlines, services, team bios, or form wiring means editing JSON only — no markup changes for routine content updates.
-
-Optional later: split into per-section JSON files if `site.json` grows large. Start with two files for simplicity.
-
-Typed access: a thin `src/content/index.ts` re-exports parsed JSON with TypeScript interfaces for autocomplete and `astro check`. The source of truth for editors remains the `.json` files.
+Components import these files via `src/content/index.ts` (thin typed re-export). Changing headlines, services, team bios, or form wiring means editing JSON only — no markup changes for routine content updates.
 
 ## Page structure (single page)
 

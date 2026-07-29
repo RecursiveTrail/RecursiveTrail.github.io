@@ -1,0 +1,165 @@
+{
+  "brand": {
+    "name": "Recursive Trail",
+    "tagline": "Senior engineers. End-to-end builds.",
+    "legalName": "Recursive Trail",
+    "email": "hello@recursivetrail.dev",
+    "location": "India · IST (UTC+5:30)"
+  },
+  "seo": {
+    "title": "Recursive Trail — Web, Mobile & Backend Development",
+    "description": "Two senior full-stack developers with 10+ years of experience. We build websites, apps, frontends, backends, and mobile products — React, Flutter, Node, Spring Boot, and Python.",
+    "ogImage": "/og.png"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services" },
+    { "label": "Stack", "href": "#stack" },
+    { "label": "Why us", "href": "#why" },
+    { "label": "Process", "href": "#process" },
+    { "label": "Team", "href": "#team" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Software studio",
+    "headline": "We build the product trail — web, mobile, and the systems behind them.",
+    "subhead": "A two-person senior team shipping websites, apps, frontends, backends, and mobile products for founders and teams who want direct access to the people writing the code.",
+    "cta": { "label": "Start an enquiry", "href": "#contact" },
+    "secondaryCta": { "label": "See how we work", "href": "#process" }
+  },
+  "services": {
+    "id": "services",
+    "eyebrow": "01 — Services",
+    "title": "What we ship",
+    "subtitle": "From first sketch to production deploy — one team across the stack.",
+    "items": [
+      {
+        "title": "Websites & web apps",
+        "description": "Marketing sites, dashboards, and product UIs that load fast and stay maintainable."
+      },
+      {
+        "title": "Frontend engineering",
+        "description": "HTML, CSS, JavaScript, and React interfaces with solid accessibility and performance."
+      },
+      {
+        "title": "Backend & APIs",
+        "description": "Node.js, Spring Boot, and Python services designed for clarity, security, and growth."
+      },
+      {
+        "title": "Mobile apps",
+        "description": "Cross-platform apps with React Native or Flutter — shared logic, native feel."
+      }
+    ]
+  },
+  "stack": {
+    "id": "stack",
+    "eyebrow": "02 — Stack",
+    "title": "Tools we specialize in",
+    "subtitle": "Modern defaults, chosen for shipping speed and long-term ownership.",
+    "groups": [
+      {
+        "label": "Frontend",
+        "items": ["HTML", "CSS", "JavaScript", "React"]
+      },
+      {
+        "label": "Mobile",
+        "items": ["React Native", "Flutter"]
+      },
+      {
+        "label": "Backend",
+        "items": ["Node.js", "Spring Boot", "Python"]
+      }
+    ]
+  },
+  "why": {
+    "id": "why",
+    "eyebrow": "03 — Why us",
+    "title": "Small team. Senior hands. No handoffs.",
+    "subtitle": "You work with the people who design, build, and ship — not an account manager layer.",
+    "points": [
+      {
+        "title": "10+ years each",
+        "description": "Two full-stack developers with production experience across products and teams."
+      },
+      {
+        "title": "End-to-end ownership",
+        "description": "UI, APIs, mobile, and deploy — one conversation covering the whole system."
+      },
+      {
+        "title": "Direct collaboration",
+        "description": "Clear updates, honest trade-offs, and fast iteration with the builders themselves."
+      }
+    ]
+  },
+  "process": {
+    "id": "process",
+    "eyebrow": "04 — Process",
+    "title": "How we work",
+    "subtitle": "A short path from enquiry to something users can touch.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discover",
+        "description": "Goals, constraints, users, and success criteria — enough to choose the right shape."
+      },
+      {
+        "number": "02",
+        "title": "Build",
+        "description": "Iterative delivery with working increments, reviews, and room to adjust scope."
+      },
+      {
+        "number": "03",
+        "title": "Ship",
+        "description": "Production-ready releases, monitoring basics, and handover you can actually own."
+      },
+      {
+        "number": "04",
+        "title": "Support",
+        "description": "Optional follow-on work for fixes, features, and the next trail of the product."
+      }
+    ]
+  },
+  "team": {
+    "id": "team",
+    "eyebrow": "05 — Team",
+    "title": "The people behind the trail",
+    "subtitle": "Two senior full-stack developers. Replace the placeholders below with real details and photos.",
+    "members": [
+      {
+        "name": "PLACEHOLDER — Name One",
+        "role": "Full-stack engineer",
+        "bio": "PLACEHOLDER — Short bio: specialty, past domains, what you care about in builds.",
+        "photo": "/team/placeholder-1.svg"
+      },
+      {
+        "name": "PLACEHOLDER — Name Two",
+        "role": "Full-stack engineer",
+        "bio": "PLACEHOLDER — Short bio: specialty, past domains, what you care about in builds.",
+        "photo": "/team/placeholder-2.svg"
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "eyebrow": "06 — Contact",
+    "title": "Tell us about the project",
+    "subtitle": "Share a few details and we will follow up to discuss scope, timeline, and fit.",
+    "successTitle": "Enquiry received",
+    "successMessage": "Thanks — we will review your note and get back to you shortly.",
+    "submitLabel": "Send enquiry",
+    "submittingLabel": "Sending…"
+  },
+  "footer": {
+    "blurb": "Recursive Trail builds web, mobile, and backend products with a senior two-person team.",
+    "copyright": "Recursive Trail. All rights reserved."
+  },
+  "social": [
+    {
+      "label": "PLACEHOLDER — LinkedIn",
+      "href": "https://linkedin.com/"
+    },
+    {
+      "label": "PLACEHOLDER — GitHub",
+      "href": "https://github.com/RecursiveTrail"
+    }
+  ]
+}
