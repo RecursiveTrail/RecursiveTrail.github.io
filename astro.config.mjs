@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://recursivetrail.github.io',
+  site: 'https://recursivetrail.com',
   vite: {
     plugins: [tailwindcss()],
   },

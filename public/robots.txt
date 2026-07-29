@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://recursivetrail.github.io/sitemap-index.xml
+Sitemap: https://recursivetrail.com/sitemap-index.xml
