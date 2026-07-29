@@ -122,19 +122,21 @@
     "id": "team",
     "eyebrow": "05 — Team",
     "title": "The people behind the trail",
-    "subtitle": "Two senior full-stack developers. Replace the placeholders below with real details and photos.",
+    "subtitle": "Two senior full-stack developers with more than a decade of industry experience each.",
     "members": [
       {
-        "name": "PLACEHOLDER — Name One",
+        "name": "Abhishek Kumar Singh",
         "role": "Full-stack engineer",
-        "bio": "PLACEHOLDER — Short bio: specialty, past domains, what you care about in builds.",
-        "photo": "/team/placeholder-1.svg"
+        "bio": "Turns ideas into shipped products, with work spanning fintech, event platforms, and a steady run of side projects built for the fun of it. Away from the editor, usually travelling, filming, or prototyping the next thing.",
+        "photo": "/team/abhishek.jpg",
+        "profile": "https://abhishekcode.github.io/"
       },
       {
-        "name": "PLACEHOLDER — Name Two",
-        "role": "Full-stack engineer",
-        "bio": "PLACEHOLDER — Short bio: specialty, past domains, what you care about in builds.",
-        "photo": "/team/placeholder-2.svg"
+        "name": "Rakesh Saroj",
+        "role": "Full-stack engineer · Frontend focus",
+        "bio": "Builds the parts of a product people actually touch — user-friendly interfaces and frontend applications, with an eye for the details that make an app feel effortless to use.",
+        "photo": "/team/rakesh.jpg",
+        "profile": "https://www.linkedin.com/in/bindaasrakesh/"
       }
     ]
   },
