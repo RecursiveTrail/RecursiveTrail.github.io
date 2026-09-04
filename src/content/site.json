@@ -1,60 +1,64 @@
 {
   "brand": {
     "name": "Recursive Trail",
-    "tagline": "Senior engineers. End-to-end builds.",
+    "tagline": "Learn. Build. Experiment. Repeat.",
     "legalName": "Recursive Trail",
     "location": "India · IST (UTC+5:30)"
   },
   "seo": {
-    "title": "Recursive Trail — Web, Mobile & Backend Development",
-    "description": "Two senior full-stack developers with 10+ years of experience. We build websites, apps, frontends, backends, and mobile products — React, Flutter, Node, Spring Boot, and Python.",
+    "title": "Recursive Trail — Learn. Build. Experiment. Repeat.",
+    "description": "Two engineers building projects, running experiments, and writing down what we learn. Open for consulting on the side.",
     "ogImage": "/og.png"
   },
   "nav": [
-    { "label": "Services", "href": "#services" },
+    { "label": "Explore", "href": "#services" },
     { "label": "Stack", "href": "#stack" },
     { "label": "Projects", "href": "#projects" },
-    { "label": "Why us", "href": "#why" },
+    { "label": "Approach", "href": "#why" },
     { "label": "Process", "href": "#process" },
     { "label": "Team", "href": "#team" },
     { "label": "Contact", "href": "#contact" }
   ],
   "hero": {
-    "eyebrow": "Software studio",
-    "headline": "We build the product trail — web, mobile, and the systems behind them.",
-    "subhead": "A two-person senior team shipping websites, apps, frontends, backends, and mobile products for founders and teams who want direct access to the people writing the code.",
-    "cta": { "label": "Start an enquiry", "href": "#contact" },
-    "secondaryCta": { "label": "See how we work", "href": "#process" }
+    "eyebrow": "Two engineers. One trail.",
+    "headline": "Learn. Build. Experiment. Repeat.",
+    "subhead": "We're a two-person team messing with projects, random experiments, and whatever we want to understand next. We write it down as we go. On the side, we're open for consulting.",
+    "cta": { "label": "See what we're up to", "href": "#services" },
+    "secondaryCta": { "label": "Consulting", "href": "#contact" }
   },
   "services": {
     "id": "services",
-    "eyebrow": "01 — Services",
-    "title": "What we ship",
-    "subtitle": "From first sketch to production deploy — one team across the stack.",
+    "eyebrow": "01 — Explore",
+    "title": "What you'll find here",
+    "subtitle": "Videos, articles, projects, and experiments from the two of us — plus consulting if you need a hand.",
     "items": [
       {
-        "title": "Websites & web apps",
-        "description": "Marketing sites, dashboards, and product UIs that load fast and stay maintainable."
+        "title": "Engineering & Technology",
+        "description": "Notes from work we're actually doing — tools, trade-offs, and the stuff that only shows up once you start building."
       },
       {
-        "title": "Frontend engineering",
-        "description": "HTML, CSS, JavaScript, and React interfaces with solid accessibility and performance."
+        "title": "Projects",
+        "description": "Things we built from scratch, including the decisions and the lessons. Not just the finished product."
       },
       {
-        "title": "Backend & APIs",
-        "description": "Node.js, Spring Boot, and Python services designed for clarity, security, and growth."
+        "title": "Experiments",
+        "description": "Random tools, technologies, and approaches we wanted to try. Some stick. Some don't. Both get written down."
       },
       {
-        "title": "Mobile apps",
-        "description": "Cross-platform apps with React Native or Flutter — shared logic, native feel."
+        "title": "Learning",
+        "description": "Concepts we figured out along the way — as they clicked, not after we sanded them smooth."
+      },
+      {
+        "title": "Problem Solving",
+        "description": "Real problems, mistakes, fixes, and what they taught us. The messy middle stays in the record."
       }
     ]
   },
   "stack": {
     "id": "stack",
     "eyebrow": "02 — Stack",
-    "title": "Tools we specialize in",
-    "subtitle": "Modern defaults, chosen for shipping speed and long-term ownership.",
+    "title": "Tools we actually use",
+    "subtitle": "What shows up in our projects and experiments — picked because we ship with it, not because it looks good on a list.",
     "groups": [
       {
         "label": "Frontend",
@@ -73,9 +77,21 @@
   "projects": {
     "id": "projects",
     "eyebrow": "03 — Projects",
-    "title": "Selected work",
-    "subtitle": "Products we have designed and built end to end.",
+    "title": "Stuff we've built",
+    "subtitle": "Real projects from the two of us, including the decisions and lessons behind them.",
     "items": [
+      {
+        "name": "Personal Context OS",
+        "tagline": "Early experiment",
+        "description": "Capture preferences, routines, and goals, then export them as a portable Markdown pack your AI agents can query over MCP. Local-only for now: speak or type notes in the browser, download a zip, and serve the pack to Cursor or another agent.",
+        "initials": "PC",
+        "tags": ["MCP", "Markdown", "React", "Node.js", "TypeScript"],
+        "link": {
+          "label": "View the repo",
+          "href": "https://github.com/RecursiveTrail/personal-ai-context",
+          "note": "Very early — capture personal context and make it available to AI tools via MCP."
+        }
+      },
       {
         "name": "FitBuddy",
         "tagline": "Fitness companion app",
@@ -85,64 +101,75 @@
         "tags": ["Flutter", "ML Kit", "MediaPipe", "Isar", "Gemini", "Supabase", "React"],
         "link": {
           "label": "Join the testing group",
-          "href": "https://groups.google.com/g/fitbuddy-app-testing"
+          "href": "https://groups.google.com/g/fitbuddy-app-testing",
+          "note": "Join to get early builds and help test the app."
         }
       }
     ]
   },
   "why": {
     "id": "why",
-    "eyebrow": "04 — Why us",
-    "title": "Small team. Senior hands. No handoffs.",
-    "subtitle": "You work with the people who design, build, and ship — not an account manager layer.",
+    "eyebrow": "04 — Approach",
+    "title": "Mostly experiments. Consulting on the side.",
+    "subtitle": "We're two people learning in public — random builds, dead ends, and the bits that actually work. If you need help shipping something, we do that too.",
     "points": [
       {
-        "title": "10+ years each",
-        "description": "Two full-stack developers with production experience across products and teams."
+        "title": "We build to learn",
+        "description": "Projects and experiments first. The writing follows the work, not a content calendar."
       },
       {
-        "title": "End-to-end ownership",
-        "description": "UI, APIs, mobile, and deploy — one conversation covering the whole system."
+        "title": "We write it down",
+        "description": "Videos, articles, and notes from the trail — including what didn't work."
       },
       {
-        "title": "Direct collaboration",
-        "description": "Clear updates, honest trade-offs, and fast iteration with the builders themselves."
+        "title": "We take consulting",
+        "description": "Need a two-person team on a product, a problem, or a build? We're open on the side."
       }
     ]
   },
   "process": {
     "id": "process",
     "eyebrow": "05 — Process",
-    "title": "How we work",
-    "subtitle": "A short path from enquiry to something users can touch.",
+    "title": "How we actually work",
+    "subtitle": "No methodology deck. This is just the loop we keep running.",
     "steps": [
       {
         "number": "01",
-        "title": "Discover",
-        "description": "Goals, constraints, users, and success criteria — enough to choose the right shape."
+        "title": "Learn",
+        "description": "Something new looks interesting. We go read, poke, and ask dumb questions."
       },
       {
         "number": "02",
         "title": "Build",
-        "description": "Iterative delivery with working increments, reviews, and room to adjust scope."
+        "description": "We turn it into a project or a small experiment instead of stopping at notes."
       },
       {
         "number": "03",
-        "title": "Ship",
-        "description": "Production-ready releases, monitoring basics, and handover you can actually own."
+        "title": "Break",
+        "description": "We find the edges — what fails, what doesn't scale, what was a bad assumption."
       },
       {
         "number": "04",
-        "title": "Support",
-        "description": "Optional follow-on work for fixes, features, and the next trail of the product."
+        "title": "Understand",
+        "description": "We figure out why it worked or didn't. That's the part that actually sticks."
+      },
+      {
+        "number": "05",
+        "title": "Improve",
+        "description": "We apply it, ship a better version, or drop it and move on."
+      },
+      {
+        "number": "06",
+        "title": "Repeat",
+        "description": "Then we pick the next thing. The trail doesn't really end."
       }
     ]
   },
   "team": {
     "id": "team",
     "eyebrow": "06 — Team",
-    "title": "The people behind the trail",
-    "subtitle": "Two senior full-stack developers with more than a decade of industry experience each.",
+    "title": "The two of us",
+    "subtitle": "Two full-stack engineers. Side projects, experiments, and this trail.",
     "members": [
       {
         "name": "Abhishek Kumar Singh",
@@ -163,15 +190,15 @@
   "contact": {
     "id": "contact",
     "eyebrow": "07 — Contact",
-    "title": "Tell us about the project",
-    "subtitle": "Share a few details and we will follow up to discuss scope, timeline, and fit.",
-    "successTitle": "Enquiry received",
-    "successMessage": "Thanks — we will review your note and get back to you shortly.",
-    "submitLabel": "Send enquiry",
+    "title": "Need a hand? We're open for consulting.",
+    "subtitle": "Most of our time goes into experiments and projects. If you need help with a product, a problem, or a build, tell us a few details and we'll follow up.",
+    "successTitle": "Message received",
+    "successMessage": "Thanks — we'll take a look and get back to you shortly.",
+    "submitLabel": "Send message",
     "submittingLabel": "Sending…"
   },
   "footer": {
-    "blurb": "Recursive Trail builds web, mobile, and backend products with a senior two-person team.",
+    "blurb": "Two engineers. Projects, experiments, and consulting on the side.",
     "copyright": "Recursive Trail. All rights reserved."
   }
 }

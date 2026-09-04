@@ -18,13 +18,22 @@ const { projects } = site;
           class="reveal grid gap-6 border-t border-line pt-8 sm:grid-cols-[auto_1fr] sm:gap-8"
           style={`animation-delay: ${i * 80}ms`}
         >
-          <img
-            src={project.image}
-            alt={project.imageAlt}
-            width="96"
-            height="96"
-            class="size-24 rounded-2xl border border-line bg-ink-soft object-cover"
-          />
+          {'image' in project && project.image ? (
+            <img
+              src={project.image}
+              alt={project.imageAlt}
+              width="96"
+              height="96"
+              class="size-24 rounded-2xl border border-line bg-ink-soft object-cover"
+            />
+          ) : (
+            <div
+              class="flex size-24 items-center justify-center rounded-2xl border border-line bg-ink-soft font-mono text-lg font-medium tracking-tight text-accent"
+              aria-hidden="true"
+            >
+              {'initials' in project ? project.initials : project.name.slice(0, 2)}
+            </div>
+          )}
           <div>
             <p class="font-mono text-xs uppercase tracking-[0.14em] text-accent">{project.tagline}</p>
             <h3 class="mt-2 text-2xl font-semibold tracking-tight text-paper">{project.name}</h3>
@@ -47,9 +56,9 @@ const { projects } = site;
                   {project.link.label}
                   <span aria-hidden="true">→</span>
                 </a>
-                <span class="mt-1 block text-sm text-mute">
-                  Join to get early builds and help test the app.
-                </span>
+                {'note' in project.link && project.link.note && (
+                  <span class="mt-1 block text-sm text-mute">{project.link.note}</span>
+                )}
               </p>
             )}
           </div>
