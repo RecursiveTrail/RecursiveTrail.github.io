@@ -11,9 +11,9 @@
     "ogImage": "/og.png"
   },
   "nav": [
+    { "label": "Projects", "href": "#projects" },
     { "label": "Explore", "href": "#services" },
     { "label": "Stack", "href": "#stack" },
-    { "label": "Projects", "href": "#projects" },
     { "label": "Approach", "href": "#why" },
     { "label": "Process", "href": "#process" },
     { "label": "Team", "href": "#team" },
@@ -23,12 +23,12 @@
     "eyebrow": "Two engineers. One trail.",
     "headline": "Learn. Build. Experiment. Repeat.",
     "subhead": "We're a two-person team messing with projects, random experiments, and whatever we want to understand next. We write it down as we go. On the side, we're open for consulting.",
-    "cta": { "label": "See what we're up to", "href": "#services" },
+    "cta": { "label": "See the projects", "href": "#projects" },
     "secondaryCta": { "label": "Consulting", "href": "#contact" }
   },
   "services": {
     "id": "services",
-    "eyebrow": "01 — Explore",
+    "eyebrow": "02 — Explore",
     "title": "What you'll find here",
     "subtitle": "Videos, articles, projects, and experiments from the two of us — plus consulting if you need a hand.",
     "items": [
@@ -56,7 +56,7 @@
   },
   "stack": {
     "id": "stack",
-    "eyebrow": "02 — Stack",
+    "eyebrow": "03 — Stack",
     "title": "Tools we actually use",
     "subtitle": "What shows up in our projects and experiments — picked because we ship with it, not because it looks good on a list.",
     "groups": [
@@ -76,9 +76,9 @@
   },
   "projects": {
     "id": "projects",
-    "eyebrow": "03 — Projects",
-    "title": "Stuff we've built",
-    "subtitle": "Real projects from the two of us, including the decisions and lessons behind them.",
+    "eyebrow": "01 — Projects",
+    "title": "What we're building",
+    "subtitle": "The work comes first. Here's what's on the trail right now — including the decisions, the lessons, and the early stuff.",
     "items": [
       {
         "name": "Personal Context OS",
@@ -88,8 +88,24 @@
         "tags": ["MCP", "Markdown", "React", "Node.js", "TypeScript"],
         "link": {
           "label": "View the repo",
-          "href": "https://github.com/RecursiveTrail/personal-ai-context",
+          "href": "https://github.com/AbhishekCode/personal-ai-context",
           "note": "Very early — capture personal context and make it available to AI tools via MCP."
+        }
+      },
+      {
+        "name": "Three.js Experiments",
+        "tagline": "WebGL playground",
+        "description": "A Vite + React gym for WebGL and React Three Fiber experiments. First up: Cat World — a stylized cat in a backyard. Mash the keyboard, watch it react.",
+        "initials": "3D",
+        "tags": ["Three.js", "R3F", "WebGL", "React", "Vite", "TypeScript"],
+        "link": {
+          "label": "Try it live",
+          "href": "https://RecursiveTrail.github.io/three-js-experiement/",
+          "note": "A Vite + React Three Fiber gym. First experiment: Cat World.",
+          "secondary": {
+            "label": "View the repo",
+            "href": "https://github.com/RecursiveTrail/three-js-experiement"
+          }
         }
       },
       {
