@@ -9,3 +9,9 @@ export type FormContent = typeof formData;
 
 export const site: SiteContent = siteData;
 export const form: FormContent = formData;
+
+const hidden = new Set(site.hiddenSections);
+
+export function isSectionVisible(id: string): boolean {
+  return !hidden.has(id);
+}

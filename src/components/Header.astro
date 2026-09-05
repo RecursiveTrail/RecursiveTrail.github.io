@@ -1,6 +1,9 @@
 ---
-import { site } from '../content';
+import { isSectionVisible, site } from '../content';
 import Logo from './Logo.astro';
+
+const nav = site.nav.filter((item) => isSectionVisible(item.href.replace('#', '')));
+const showNav = nav.length >= 4;
 ---
 
 <header
@@ -11,24 +14,19 @@ import Logo from './Logo.astro';
       <Logo />
     </a>
 
-    <nav class="hidden items-center gap-6 md:flex" aria-label="Primary">
-      {
-        site.nav.map((item) => (
-          <a
-            href={item.href}
-            class="font-mono text-xs uppercase tracking-[0.14em] text-mute transition hover:text-paper"
-          >
-            {item.label}
-          </a>
-        ))
-      }
-    </nav>
-
-    <a
-      href="#contact"
-      class="rounded-md bg-accent px-3.5 py-2 text-sm font-semibold text-ink transition hover:bg-accent/90"
-    >
-      Consulting
-    </a>
+    {
+      showNav && (
+        <nav class="hidden items-center gap-6 md:flex" aria-label="Primary">
+          {nav.map((item) => (
+            <a
+              href={item.href}
+              class="font-mono text-xs uppercase tracking-[0.14em] text-mute transition hover:text-paper"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      )
+    }
   </div>
 </header>

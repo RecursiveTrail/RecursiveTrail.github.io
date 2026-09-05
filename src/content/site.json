@@ -7,9 +7,10 @@
   },
   "seo": {
     "title": "Recursive Trail — Learn. Build. Experiment. Repeat.",
-    "description": "Two engineers building projects, running experiments, and writing down what we learn. Open for consulting on the side.",
+    "description": "Two engineers building projects, running experiments, and writing down what we learn.",
     "ogImage": "/og.png"
   },
+  "hiddenSections": ["services", "stack", "why", "process", "contact"],
   "nav": [
     { "label": "Projects", "href": "#projects" },
     { "label": "Explore", "href": "#services" },
@@ -22,15 +23,14 @@
   "hero": {
     "eyebrow": "Two engineers. One trail.",
     "headline": "Learn. Build. Experiment. Repeat.",
-    "subhead": "We're a two-person team messing with projects, random experiments, and whatever we want to understand next. We write it down as we go. On the side, we're open for consulting.",
-    "cta": { "label": "See the projects", "href": "#projects" },
-    "secondaryCta": { "label": "Consulting", "href": "#contact" }
+    "subhead": "We're a two-person team messing with projects, random experiments, and whatever we want to understand next. We write it down as we go.",
+    "cta": { "label": "See the projects", "href": "#projects" }
   },
   "services": {
     "id": "services",
     "eyebrow": "02 — Explore",
     "title": "What you'll find here",
-    "subtitle": "Videos, articles, projects, and experiments from the two of us — plus consulting if you need a hand.",
+    "subtitle": "Videos, articles, projects, and experiments from the two of us — learning by building, not by theory.",
     "items": [
       {
         "title": "Engineering & Technology",
@@ -126,8 +126,8 @@
   "why": {
     "id": "why",
     "eyebrow": "04 — Approach",
-    "title": "Mostly experiments. Consulting on the side.",
-    "subtitle": "We're two people learning in public — random builds, dead ends, and the bits that actually work. If you need help shipping something, we do that too.",
+    "title": "Mostly experiments. Learning as we go.",
+    "subtitle": "We're two people learning in public — random builds, dead ends, and the bits that actually work.",
     "points": [
       {
         "title": "We build to learn",
@@ -138,8 +138,8 @@
         "description": "Videos, articles, and notes from the trail — including what didn't work."
       },
       {
-        "title": "We take consulting",
-        "description": "Need a two-person team on a product, a problem, or a build? We're open on the side."
+        "title": "We keep looping",
+        "description": "Learn, build, break, understand, improve. Then pick the next thing."
       }
     ]
   },
@@ -214,7 +214,7 @@
     "submittingLabel": "Sending…"
   },
   "footer": {
-    "blurb": "Two engineers. Projects, experiments, and consulting on the side.",
+    "blurb": "Two engineers. Projects, experiments, and learning in public.",
     "copyright": "Recursive Trail. All rights reserved."
   }
 }
